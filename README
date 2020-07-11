@@ -1,0 +1,44 @@
+This repository contains files that describe the inequalities that govern certain causal
+structures. These structures are described in the Master Thesis by Laurens Ligthart.
+
+The repository is split up into maps that contain files for different causal structures.
+The causal structures that have been discussed are:
+
+Extended triangle
+Extended triangle with connections
+Causal #9
+Causal #11
+General cccq
+General ccqq
+
+There are three file types:
+
+.ine 			The H-representation for the lrs programs
+.ext			The V-representation for the lrs programs
+.ieq			The H-representation for the Porta programs
+
+For information about formating of .ine or .ext files, we refer to the documentation for
+lrslib at http://cgm.cs.mcgill.ca/~avis/C/lrs.html. For information about formatting of
+.ieq files, we refer to the Porta documentation at http://comopt.ifi.uni-heidelberg.de/software/PORTA/
+
+All files are based on Shannon and von Neumann inequalities and (in)equalities implied 
+by the causal structure. In addition, other inequalities were included based on the file 
+name:
+
+noZY			-
+class			Classical Zhang-Yeung (ZY) inequalities
+quantum			cccq and ccqq ZY inequalities
+ZY				Classical, cccq and ccqq ZY inequalities
+allZY			All classical and quantum ZY inequalities (including unproven ones)
+allqZY			All quantum ZY inequalities (including unproven ones)
+families_x		Classical, cccq and ccqq ZY inequalities, and inequalities of the 
+				infinite family up to s=x for ccqc ZY inequalities
+
+If the filename contains the letters FM, the Fourier-Motzkin elimination was successful.
+The file then contains the relevant inequalities for the 2^4-1=15 remaining entries of 
+the entropy vector if it is an .ine or .ieq file, or the extremal rays of the 15 dimen-
+sional cone if it is an .ext file. Otherwise, the file contains the relevant inequalities 
+that hold before the Fourier-Motzkin elimination is performed.
+Redundancy has been removed from all .ine files with the redund program of lrs.
+
+For questions, feel free to send an email to laurensligthart@gmail.com
